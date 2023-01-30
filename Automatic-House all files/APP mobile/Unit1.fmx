@@ -1,0 +1,168 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 448
+  ClientWidth = 493
+  Position = Designed
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 493.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 493.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Remote - Home'
+      TabOrder = 0
+    end
+  end
+  object lsboxPrincipal: TListBox
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 493.000000000000000000
+    Size.Height = 200.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 493.000000000000000000
+    Viewport.Height = 200.000000000000000000
+    object ToastMessage: TLayout
+      Align = Center
+      Size.Width = 393.000000000000000000
+      Size.Height = 45.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object RoundRect1: TRoundRect
+        Align = Contents
+        Fill.Color = claCrimson
+        Opacity = 0.800000011920929000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Size.Width = 353.000000000000000000
+        Size.Height = 45.000000000000000000
+        Size.PlatformDefault = False
+        object lblMensagem: TLabel
+          Align = Contents
+          StyledSettings = []
+          Size.Width = 353.000000000000000000
+          Size.Height = 45.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Sitka Banner'
+          TextSettings.Font.Size = 24.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claIvory
+          TextSettings.HorzAlign = Center
+          Text = 'Aguardando...'
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object ListBox2: TListBox
+    Align = Top
+    Position.Y = 248.000000000000000000
+    Size.Width = 493.000000000000000000
+    Size.Height = 200.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 493.000000000000000000
+    Viewport.Height = 200.000000000000000000
+    object services: TListBoxGroupHeader
+      TextSettings.HorzAlign = Center
+      StyledSettings = [Family, Size, Style, FontColor]
+      Size.Width = 493.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Escolha o servi'#231'o:'
+    end
+    object ListBoxItem1: TListBoxItem
+      Position.Y = 30.000000000000000000
+      TabOrder = 1
+      object Button1: TButton
+        Align = Right
+        Margins.Left = 4.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 4.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Position.X = 386.000000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 103.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Conectar'
+        OnClick = Button1Click
+      end
+      object cbxSevices: TComboBox
+        Align = Client
+        Margins.Left = 4.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 4.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 374.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object services2: TListBoxGroupHeader
+      TextSettings.HorzAlign = Center
+      StyledSettings = [Family, Size, Style, FontColor]
+      Position.Y = 74.000000000000000000
+      Size.Width = 493.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Liga/Desliga'
+    end
+    object buttons: TListBoxItem
+      Position.Y = 104.000000000000000000
+      TabOrder = 3
+      object GridLayout1: TGridLayout
+        ItemHeight = 40.000000000000000000
+        ItemWidth = 100.000000000000000000
+        Orientation = Horizontal
+        Position.X = 128.000000000000000000
+        Size.Width = 201.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object btnLiga: TButton
+          Size.Width = 100.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Liga'
+          OnClick = btnLigaClick
+        end
+        object btnDesliga: TButton
+          Enabled = False
+          Position.X = 100.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Desliga'
+          OnClick = btnDesligaClick
+        end
+      end
+    end
+  end
+end
